@@ -1,0 +1,2 @@
+function f = SquashingModelFunc(Omega,SxxMax,SxxNoise,g,fi,OmegaM,GammaM)
+f = (SxxMax*(OmegaM*GammaM)^2+SxxNoise*((OmegaM.^2 - Omega.^2).^2+(Omega*GammaM).^2))./((OmegaM^2-Omega.^2-g*Omega*GammaM*sin(fi)).^2+(Omega*GammaM*(1+g*cos(fi))).^2);
